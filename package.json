@@ -1,0 +1,20 @@
+{
+    "private": true,
+    "name": "javatypes",
+    "version": "0.0.0",
+    "author": "MiaoWoo <admin@yumc.pw>",
+    "homepage": "https://github.com/circlecloud/javatypes#readme",
+    "license": "MIT",
+    "types": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/circlecloud/javatypes.git"
+    },
+    "bugs": {
+        "url": "https://github.com/circlecloud/javatypes/issues"
+    },
+    "devDependencies": {
+        "@types/node": "^14.0.13",
+        "typescript": "^3.9.5"
+    }
+}
