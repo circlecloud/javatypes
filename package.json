@@ -6,6 +6,9 @@
     "homepage": "https://github.com/circlecloud/javatypes#readme",
     "license": "MIT",
     "types": "dist/index.d.ts",
+    "workspaces": [
+        "packages/*"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/circlecloud/javatypes.git"
@@ -15,6 +18,7 @@
     },
     "devDependencies": {
         "@types/node": "^14.0.13",
+        "lerna": "^3.22.1",
         "typescript": "^3.9.5"
     }
 }
