@@ -1,0 +1,30 @@
+declare namespace org {
+    namespace bukkit {
+        namespace event {
+            namespace hanging {
+                /**
+                 * Triggered when a hanging entity is removed
+                 */
+                // @ts-ignore
+                class HangingBreakEvent extends org.bukkit.event.hanging.HangingEvent implements org.bukkit.event.Cancellable {
+                    // @ts-ignore
+                    constructor(hanging: org.bukkit.entity.Hanging, cause: org.bukkit.event.hanging.HangingBreakEvent.RemoveCause)
+                    /**
+                     * Gets the cause for the hanging entity's removal
+                     * @return the RemoveCause for the hanging entity's removal
+                     */
+                    // @ts-ignore
+                    getCause(): org.bukkit.event.hanging.HangingBreakEvent.RemoveCause
+                    // @ts-ignore
+                    isCancelled(): boolean
+                    // @ts-ignore
+                    setCancelled(cancel: boolean): void
+                    // @ts-ignore
+                    getHandlers(): org.bukkit.event.HandlerList
+                    // @ts-ignore
+                    getHandlerList(): org.bukkit.event.HandlerList
+                }
+            }
+        }
+    }
+}
