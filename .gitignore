@@ -5,4 +5,5 @@
 node_modules
 build.js
 yarn.lock
+/*.sh
 # https://docs.oracle.com/javase/10/docs/api/jdk/javadoc/doclet/package-summary.html

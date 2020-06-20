@@ -1,10 +1,12 @@
-set -ex
+set -e
 
 JAVA_HOME=${JAVA_HOME:-'/usr/java/jdk1.8.0_221-amd64'}
 
-GROUP=${3:-org/springframework}
-ARTIFACT=${1:-spring-core}
-VERSION=${2:-5.2.6}.RELEASE
+GROUP=${1:-org.springframework}
+GROUP=${GROUP//./\/}
+ARTIFACT=${2:-spring-core}
+VERSION=${3:-5.2.6.RELEASE}
+PACKAGES=${4:-org}
 
 ARTIFACT_VERSION=${ARTIFACT}-${VERSION}
 
@@ -13,41 +15,30 @@ DOWNLOAD_URL=https://repo.yumc.pw/repository/maven-public/${GROUP}/${ARTIFACT}/$
 mkdir -p jars sources docs
 
 if [[ ! -f "jars/${ARTIFACT_VERSION}.jar" ]]; then
-    echo "Download source jar file..."
+    echo "Download source file jars/${ARTIFACT_VERSION}.jar from ${DOWNLOAD_URL}..."
     wget ${DOWNLOAD_URL} -O jars/${ARTIFACT_VERSION}.jar > /dev/null
 fi
 
 if [[ ! -d "sources/${ARTIFACT_VERSION}/META-INF" ]]; then
     mkdir -p sources/${ARTIFACT_VERSION}
-    echo "unzip source jar file..."
+    echo "Unzip source file jars/${ARTIFACT_VERSION}.jar to sources/${ARTIFACT_VERSION}..."
     unzip -o jars/${ARTIFACT_VERSION}.jar -d sources/${ARTIFACT_VERSION} > /dev/null
 fi
 
-echo "generate javadoc json"
-${JAVA_HOME}/bin/javadoc \
-    -doclet com.raidandfade.JsonDoclet.Main \
-    -docletpath json-jdoc.jar \
-    -sourcepath $(pwd)/sources/${ARTIFACT_VERSION} \
-    -cp jars,${JAVA_HOME}/lib,${JAVA_HOME}/jre/lib \
-    -subpackages org
-
-rm -rf docs/${ARTIFACT}
-mv javadocs/ docs/${ARTIFACT}/
-
-# rabbitmq spring sponge bukkit jdk bungee nukkit
 TYPE=${ARTIFACT}
 TARGET=packages/${TYPE}/dist
-npx tsc build.ts --outDir dist
-cd dist
-rm -rf temp
-mkdir -p temp
-echo "generate javadoc d.ts file"
-node build.js ${TYPE}
-cd ../
-rm -rf ${TARGET}/*.ts
-mkdir -p ${TARGET}
-cp dist/temp/* ${TARGET}/ -R > /dev/null
-echo "generate package.json file"
+
+echo "Generate typescript d.ts file..."
+${JAVA_HOME}/bin/javadoc \
+    -d ${TARGET} \
+    -js $(pwd)/dist/parse.js \
+    -doclet pw.yumc.JsonDoclet.Main \
+    -docletpath script-doclet.jar \
+    -sourcepath $(pwd)/sources/${ARTIFACT_VERSION} \
+    -cp $(pwd)/jars,${JAVA_HOME}/lib,${JAVA_HOME}/jre/lib \
+    -subpackages ${PACKAGES}
+
+echo "Generate package.json file..."
 cat > packages/${TYPE}/package.json<<EOF
 {
     "name": "@javatypes/${TYPE}",
