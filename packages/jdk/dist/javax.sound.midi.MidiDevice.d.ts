@@ -1,0 +1,212 @@
+declare namespace javax {
+    namespace sound {
+        namespace midi {
+            /**
+             * <code>MidiDevice</code> is the base interface for all MIDI devices.
+             * Common devices include synthesizers, sequencers, MIDI input ports, and MIDI
+             * output ports.
+             * <p>A <code>MidiDevice</code> can be a transmitter or a receiver of
+             * MIDI events, or both. Therefore, it can provide {@link Transmitter}
+             * or {@link Receiver} instances (or both). Typically, MIDI IN ports
+             * provide transmitters, MIDI OUT ports and synthesizers provide
+             * receivers. A Sequencer typically provides transmitters for playback
+             * and receivers for recording.
+             * <p>A <code>MidiDevice</code> can be opened and closed explicitly as
+             * well as implicitly. Explicit opening is accomplished by calling
+             * {@link #open}, explicit closing is done by calling {@link
+             * #close} on the <code>MidiDevice</code> instance.
+             * If an application opens a <code>MidiDevice</code>
+             * explicitly, it has to close it explicitly to free system resources
+             * and enable the application to exit cleanly. Implicit opening is
+             * done by calling {@link javax.sound.midi.MidiSystem#getReceiver
+             * MidiSystem.getReceiver} and {@link
+             * javax.sound.midi.MidiSystem#getTransmitter
+             * MidiSystem.getTransmitter}. The <code>MidiDevice</code> used by
+             * <code>MidiSystem.getReceiver</code> and
+             * <code>MidiSystem.getTransmitter</code> is implementation-dependant
+             * unless the properties <code>javax.sound.midi.Receiver</code>
+             * and <code>javax.sound.midi.Transmitter</code> are used (see the
+             * description of properties to select default providers in
+             * {@link javax.sound.midi.MidiSystem}). A <code>MidiDevice</code>
+             * that was opened implicitly, is closed implicitly by closing the
+             * <code>Receiver</code> or <code>Transmitter</code> that resulted in
+             * opening it. If more than one implicitly opening
+             * <code>Receiver</code> or <code>Transmitter</code> were obtained by
+             * the application, the device is closed after the last
+             * <code>Receiver</code> or <code>Transmitter</code> has been
+             * closed. On the other hand, calling <code>getReceiver</code> or
+             * <code>getTransmitter</code> on the device instance directly does
+             * not open the device implicitly. Closing these
+             * <code>Transmitter</code>s and <code>Receiver</code>s does not close
+             * the device implicitly. To use a device with <code>Receiver</code>s
+             * or <code>Transmitter</code>s obtained this way, the device has to
+             * be opened and closed explicitly.
+             * <p>If implicit and explicit opening and closing are mixed on the
+             * same <code>MidiDevice</code> instance, the following rules apply:
+             * <ul>
+             * <li>After an explicit open (either before or after implicit
+             * opens), the device will not be closed by implicit closing. The only
+             * way to close an explicitly opened device is an explicit close.</li>
+             * <li>An explicit close always closes the device, even if it also has
+             * been opened implicitly. A subsequent implicit close has no further
+             * effect.</li>
+             * </ul>
+             * To detect if a MidiDevice represents a hardware MIDI port, the
+             * following programming technique can be used:
+             * <pre>{@code
+             * MidiDevice device = ...;
+             * if ( ! (device instanceof Sequencer) && ! (device instanceof Synthesizer)) {
+             * // we're now sure that device represents a MIDI port
+             * // ...
+             * }
+             * }</pre>
+             * <p>
+             * A <code>MidiDevice</code> includes a <code>{@link MidiDevice.Info}</code> object
+             * to provide manufacturer information and so on.
+             * @see Synthesizer
+             * @see Sequencer
+             * @see Receiver
+             * @see Transmitter
+             * @author Kara Kytle
+             * @author Florian Bomers
+             */
+            // @ts-ignore
+            interface MidiDevice extends java.lang.AutoCloseable {
+                /**
+                 * Obtains information about the device, including its Java class and
+                 * <code>Strings</code> containing its name, vendor, and description.
+                 * @return device info
+                 */
+                // @ts-ignore
+                getDeviceInfo(): javax.sound.midi.MidiDevice.Info
+                /**
+                 * Opens the device, indicating that it should now acquire any
+                 * system resources it requires and become operational.
+                 * <p>An application opening a device explicitly with this call
+                 * has to close the device by calling {@link #close}. This is
+                 * necessary to release system resources and allow applications to
+                 * exit cleanly.
+                 * <p>
+                 * Note that some devices, once closed, cannot be reopened.  Attempts
+                 * to reopen such a device will always result in a MidiUnavailableException.
+                 * @throws MidiUnavailableException thrown if the device cannot be
+                 *  opened due to resource restrictions.
+                 * @throws SecurityException thrown if the device cannot be
+                 *  opened due to security restrictions.
+                 * @see #close
+                 * @see #isOpen
+                 */
+                // @ts-ignore
+                open(): void
+                /**
+                 * Closes the device, indicating that the device should now release
+                 * any system resources it is using.
+                 * <p>All <code>Receiver</code> and <code>Transmitter</code> instances
+                 * open from this device are closed. This includes instances retrieved
+                 * via <code>MidiSystem</code>.
+                 * @see #open
+                 * @see #isOpen
+                 */
+                // @ts-ignore
+                close(): void
+                /**
+                 * Reports whether the device is open.
+                 * @return <code>true</code> if the device is open, otherwise
+                 *  <code>false</code>
+                 * @see #open
+                 * @see #close
+                 */
+                // @ts-ignore
+                isOpen(): boolean
+                /**
+                 * Obtains the current time-stamp of the device, in microseconds.
+                 * If a device supports time-stamps, it should start counting at
+                 * 0 when the device is opened and continue incrementing its
+                 * time-stamp in microseconds until the device is closed.
+                 * If it does not support time-stamps, it should always return
+                 * -1.
+                 * @return the current time-stamp of the device in microseconds,
+                 *  or -1 if time-stamping is not supported by the device.
+                 */
+                // @ts-ignore
+                getMicrosecondPosition(): long
+                /**
+                 * Obtains the maximum number of MIDI IN connections available on this
+                 * MIDI device for receiving MIDI data.
+                 * @return maximum number of MIDI IN connections,
+                 *  or -1 if an unlimited number of connections is available.
+                 */
+                // @ts-ignore
+                getMaxReceivers(): int
+                /**
+                 * Obtains the maximum number of MIDI OUT connections available on this
+                 * MIDI device for transmitting MIDI data.
+                 * @return maximum number of MIDI OUT connections,
+                 *  or -1 if an unlimited number of connections is available.
+                 */
+                // @ts-ignore
+                getMaxTransmitters(): int
+                /**
+                 * Obtains a MIDI IN receiver through which the MIDI device may receive
+                 * MIDI data.  The returned receiver must be closed when the application
+                 * has finished using it.
+                 * <p>Usually the returned receiver implements
+                 * the {@code MidiDeviceReceiver} interface.
+                 * <p>Obtaining a <code>Receiver</code> with this method does not
+                 * open the device. To be able to use the device, it has to be
+                 * opened explicitly by calling {@link #open}. Also, closing the
+                 * <code>Receiver</code> does not close the device. It has to be
+                 * closed explicitly by calling {@link #close}.
+                 * @return a receiver for the device.
+                 * @throws MidiUnavailableException thrown if a receiver is not available
+                 *  due to resource restrictions
+                 * @see Receiver#close()
+                 */
+                // @ts-ignore
+                getReceiver(): javax.sound.midi.Receiver
+                /**
+                 * Returns all currently active, non-closed receivers
+                 * connected with this MidiDevice.
+                 * A receiver can be removed
+                 * from the device by closing it.
+                 * <p>Usually the returned receivers implement
+                 * the {@code MidiDeviceReceiver} interface.
+                 * @return an unmodifiable list of the open receivers
+                 * @since 1.5
+                 */
+                // @ts-ignore
+                getReceivers(): java.util.List<javax.sound.midi.Receiver>
+                /**
+                 * Obtains a MIDI OUT connection from which the MIDI device will transmit
+                 * MIDI data  The returned transmitter must be closed when the application
+                 * has finished using it.
+                 * <p>Usually the returned transmitter implements
+                 * the {@code MidiDeviceTransmitter} interface.
+                 * <p>Obtaining a <code>Transmitter</code> with this method does not
+                 * open the device. To be able to use the device, it has to be
+                 * opened explicitly by calling {@link #open}. Also, closing the
+                 * <code>Transmitter</code> does not close the device. It has to be
+                 * closed explicitly by calling {@link #close}.
+                 * @return a MIDI OUT transmitter for the device.
+                 * @throws MidiUnavailableException thrown if a transmitter is not available
+                 *  due to resource restrictions
+                 * @see Transmitter#close()
+                 */
+                // @ts-ignore
+                getTransmitter(): javax.sound.midi.Transmitter
+                /**
+                 * Returns all currently active, non-closed transmitters
+                 * connected with this MidiDevice.
+                 * A transmitter can be removed
+                 * from the device by closing it.
+                 * <p>Usually the returned transmitters implement
+                 * the {@code MidiDeviceTransmitter} interface.
+                 * @return an unmodifiable list of the open transmitters
+                 * @since 1.5
+                 */
+                // @ts-ignore
+                getTransmitters(): java.util.List<javax.sound.midi.Transmitter>
+            }
+        }
+    }
+}
