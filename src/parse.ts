@@ -62,7 +62,7 @@ function start(root: com.sun.javadoc.RootDoc) {
         indexString += `/// <reference path="./${name}" />\n`
     }
     writeFile('index.d.ts', indexString)
-    return false
+    return true
 }
 
 interface Options {

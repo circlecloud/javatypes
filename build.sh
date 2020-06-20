@@ -42,7 +42,7 @@ echo "Generate package.json file..."
 cat > packages/${TYPE}/package.json<<EOF
 {
     "name": "@javatypes/${TYPE}",
-    "version": "0.0.0",
+    "version": "${VERSION:-0.0.0}",
     "description": "java ${TYPE} types",
     "author": "MiaoWoo <admin@yumc.pw>",
     "homepage": "https://github.com/circlecloud/javatypes#readme",
