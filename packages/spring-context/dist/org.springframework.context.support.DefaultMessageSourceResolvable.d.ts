@@ -1,0 +1,102 @@
+declare namespace org {
+    namespace springframework {
+        namespace context {
+            namespace support {
+                /**
+                 * Spring's default implementation of the {@link MessageSourceResolvable} interface.
+                 * Offers an easy way to store all the necessary values needed to resolve
+                 * a message via a {@link org.springframework.context.MessageSource}.
+                 * @author Juergen Hoeller
+                 * @since 13.02.2004
+                 * @see org.springframework.context.MessageSource#getMessage(MessageSourceResolvable, java.util.Locale)
+                 */
+                // @ts-ignore
+                class DefaultMessageSourceResolvable extends java.lang.Object implements org.springframework.context.MessageSourceResolvable, java.io.Serializable {
+                    /**
+                     * Create a new DefaultMessageSourceResolvable.
+                     * @param code the code to be used to resolve this message
+                     */
+                    // @ts-ignore
+                    constructor(code: string)
+                    /**
+                     * Create a new DefaultMessageSourceResolvable.
+                     * @param codes the codes to be used to resolve this message
+                     */
+                    // @ts-ignore
+                    constructor(codes: string[])
+                    /**
+                     * Create a new DefaultMessageSourceResolvable.
+                     * @param codes the codes to be used to resolve this message
+                     * @param defaultMessage the default message to be used to resolve this message
+                     */
+                    // @ts-ignore
+                    constructor(codes: string[], defaultMessage: string)
+                    /**
+                     * Create a new DefaultMessageSourceResolvable.
+                     * @param codes the codes to be used to resolve this message
+                     * @param arguments the array of arguments to be used to resolve this message
+                     */
+                    // @ts-ignore
+                    constructor(codes: string[], arguments: any[])
+                    /**
+                     * Create a new DefaultMessageSourceResolvable.
+                     * @param codes the codes to be used to resolve this message
+                     * @param arguments the array of arguments to be used to resolve this message
+                     * @param defaultMessage the default message to be used to resolve this message
+                     */
+                    // @ts-ignore
+                    constructor(codes: string[], arguments: any[], defaultMessage: string)
+                    /**
+                     * Copy constructor: Create a new instance from another resolvable.
+                     * @param resolvable the resolvable to copy from
+                     */
+                    // @ts-ignore
+                    constructor(resolvable: org.springframework.context.MessageSourceResolvable)
+                    /**
+                     * Return the default code of this resolvable, that is,
+                     * the last one in the codes array.
+                     */
+                    // @ts-ignore
+                    getCode(): java.lang.String
+                    // @ts-ignore
+                    getCodes(): java.lang.String[]
+                    // @ts-ignore
+                    getArguments(): java.lang.Object[]
+                    // @ts-ignore
+                    getDefaultMessage(): java.lang.String
+                    /**
+                     * Indicate whether the specified default message needs to be rendered for
+                     * substituting placeholders and/or {@link java.text.MessageFormat} escaping.
+                     * @return {#code true} if the default message may contain argument placeholders;
+                     *  {@code false} if it definitely does not contain placeholders or custom escaping
+                     *  and can therefore be simply exposed as-is
+                     * @since 5.1.7
+                     * @see #getDefaultMessage()
+                     * @see #getArguments()
+                     * @see AbstractMessageSource#renderDefaultMessage
+                     */
+                    // @ts-ignore
+                    shouldRenderDefaultMessage(): boolean
+                    /**
+                     * Build a default String representation for this MessageSourceResolvable:
+                     * including codes, arguments, and default message.
+                     */
+                    // @ts-ignore
+                    resolvableToString(): java.lang.String
+                    /**
+                     * The default implementation exposes the attributes of this MessageSourceResolvable.
+                     * <p>To be overridden in more specific subclasses, potentially including the
+                     * resolvable content through {@code resolvableToString()}.
+                     * @see #resolvableToString()
+                     */
+                    // @ts-ignore
+                    toString(): java.lang.String
+                    // @ts-ignore
+                    equals(other: any): boolean
+                    // @ts-ignore
+                    hashCode(): int
+                }
+            }
+        }
+    }
+}
