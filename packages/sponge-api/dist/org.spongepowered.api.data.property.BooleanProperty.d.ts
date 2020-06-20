@@ -1,0 +1,43 @@
+declare namespace org {
+    namespace spongepowered {
+        namespace api {
+            namespace data {
+                namespace property {
+                    /**
+                     * Represents an item property that has an integer value. Examples may include
+                     * {@link FoodRestorationProperty}, {@link SaturationProperty} etc.
+                     */
+                    // @ts-ignore
+                    class BooleanProperty extends org.spongepowered.api.data.property.AbstractProperty<java.lang.String, java.lang.Boolean> {
+                        /**
+                         * Create a new integer property with the specified value.
+                         * @param value value to match
+                         */
+                        // @ts-ignore
+                        constructor(value: boolean)
+                        /**
+                         * Create a new integer property with the specified value and logical
+                         * operator.
+                         * @param value value to match
+                         * @param operator logical operator to use when comparing to other
+                         *       properties
+                         */
+                        // @ts-ignore
+                        constructor(value: boolean, operator: org.spongepowered.api.data.Property.Operator)
+                        /**
+                         * Create a new integer property with the specified value and logical
+                         * operator.
+                         * @param value value to match
+                         * @param operator logical operator to use when comparing to other
+                         *       properties
+                         */
+                        // @ts-ignore
+                        constructor(value: any, operator: org.spongepowered.api.data.Property.Operator)
+                        // @ts-ignore
+                        compareTo(other: org.spongepowered.api.data.Property<any, ?>): int
+                    }
+                }
+            }
+        }
+    }
+}
