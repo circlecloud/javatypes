@@ -32,7 +32,7 @@ echo "Generate typescript d.ts file..."
 ${JAVA_HOME}/bin/javadoc \
     -d ${TARGET} \
     -js $(pwd)/dist/parse.js \
-    -doclet pw.yumc.JsonDoclet.Main \
+    -doclet pw.yumc.ScriptDoclet.Main \
     -docletpath script-doclet.jar \
     -sourcepath $(pwd)/sources/${ARTIFACT_VERSION} \
     -cp $(pwd)/jars,${JAVA_HOME}/lib,${JAVA_HOME}/jre/lib \
