@@ -18,7 +18,7 @@ declare namespace com {
                  * For example if parameter is the short 'index', returns "index".
                  */
                 // @ts-ignore
-                name(): java.lang.String
+                name(): string
                 /**
                  * Get type name of this parameter.
                  * For example if parameter is the short 'index', returns "short".
@@ -28,7 +28,7 @@ declare namespace com {
                  * the type arguments of parameterized types.  Names are qualified.
                  */
                 // @ts-ignore
-                typeName(): java.lang.String
+                typeName(): string
                 /**
                  * Returns a string representation of the parameter.
                  * <p>
@@ -36,7 +36,7 @@ declare namespace com {
                  * @return type and parameter name of this parameter.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
                 /**
                  * Get the annotations of this parameter.
                  * Return an empty array if there are none.

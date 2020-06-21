@@ -257,7 +257,7 @@ declare namespace com {
                  * Return the ClassDoc if found, null if not found.
                  */
                 // @ts-ignore
-                findClass(className: string): com.sun.javadoc.ClassDoc
+                findClass(className: java.lang.String | string): com.sun.javadoc.ClassDoc
                 /**
                  * Get the list of classes and interfaces declared as imported.
                  * These are called "single-type-import declarations" in

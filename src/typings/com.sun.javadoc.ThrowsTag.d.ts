@@ -17,14 +17,14 @@ declare namespace com {
                  * @return name of the exception.
                  */
                 // @ts-ignore
-                exceptionName(): java.lang.String
+                exceptionName(): string
                 /**
                  * Return the exception comment
                  * associated with this <code>ThrowsTag</code>.
                  * @return exception comment.
                  */
                 // @ts-ignore
-                exceptionComment(): java.lang.String
+                exceptionComment(): string
                 /**
                  * Return a <code>ClassDoc</code> that represents the exception.
                  * If the type of the exception is a type variable, return the

@@ -11,13 +11,13 @@ declare namespace com {
              * @author Scott Seligman (generics, enums, annotations)
              */
             // @ts-ignore
-            interface Doc extends java.lang.Comparable<java.lang.Object> {
+            interface Doc extends java.lang.Comparable<java.lang.Object | any> {
                 /**
                  * Return the text of the comment for this doc item.
                  * Tags have been removed.
                  */
                 // @ts-ignore
-                commentText(): java.lang.String
+                commentText(): string
                 /**
                  * Return all tags in this Doc item.
                  * @return an array of {#link Tag} objects containing all tags on
@@ -35,7 +35,7 @@ declare namespace com {
                  *  matches 'tagname'.
                  */
                 // @ts-ignore
-                tags(tagname: string): com.sun.javadoc.Tag[]
+                tags(tagname: java.lang.String | string): com.sun.javadoc.Tag[]
                 /**
                  * Return the see also tags in this Doc item.
                  * @return an array of SeeTag containing all #see tags.
@@ -87,20 +87,20 @@ declare namespace com {
                  * operations like internalization.
                  */
                 // @ts-ignore
-                getRawCommentText(): java.lang.String
+                getRawCommentText(): string
                 /**
                  * Set the full unprocessed text of the comment.  Tags
                  * are included as text.  Used mainly for store and retrieve
                  * operations like internalization.
                  */
                 // @ts-ignore
-                setRawCommentText(rawDocumentation: string): void
+                setRawCommentText(rawDocumentation: java.lang.String | string): void
                 /**
                  * Returns the non-qualified name of this Doc item.
                  * @return the name
                  */
                 // @ts-ignore
-                name(): java.lang.String
+                name(): string
                 /**
                  * Compares this doc object with the specified object for order.  Returns a
                  * negative integer, zero, or a positive integer as this doc object is less
@@ -114,7 +114,7 @@ declare namespace com {
                  *         from being compared to this Object.
                  */
                 // @ts-ignore
-                compareTo(obj: any): int
+                compareTo(obj: java.lang.Object | any): number /*int*/
                 /**
                  * Is this Doc item a field (but not an enum constant)?
                  * @return true if it represents a field

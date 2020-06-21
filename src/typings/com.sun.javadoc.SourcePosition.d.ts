@@ -20,7 +20,7 @@ declare namespace com {
                  * 0 means no line number information is available.
                  */
                 // @ts-ignore
-                line(): int
+                line(): number /*int*/
                 /**
                  * The column in the source file. The first column is
                  * numbered 1; 0 means no column information is available.
@@ -28,12 +28,12 @@ declare namespace com {
                  * advances the column number to the next 8-column tab stop.
                  */
                 // @ts-ignore
-                column(): int
+                column(): number /*int*/
                 /**
                  * Convert the source position to the form "Filename:line".
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

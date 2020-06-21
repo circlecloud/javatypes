@@ -28,7 +28,7 @@ declare namespace com {
                  * @return an array of arrays of String.
                  */
                 // @ts-ignore
-                options(): java.lang.String[][]
+                options(): string[][]
                 /**
                  * Return the packages
                  * <a href="package-summary.html#included">specified</a>
@@ -62,7 +62,7 @@ declare namespace com {
                  *  this package is not referenced.
                  */
                 // @ts-ignore
-                packageNamed(name: string): com.sun.javadoc.PackageDoc
+                packageNamed(name: java.lang.String | string): com.sun.javadoc.PackageDoc
                 /**
                  * Return a ClassDoc for the specified class or interface name.
                  * @param qualifiedName
@@ -72,7 +72,7 @@ declare namespace com {
                  *  this class is not referenced.
                  */
                 // @ts-ignore
-                classNamed(qualifiedName: string): com.sun.javadoc.ClassDoc
+                classNamed(qualifiedName: java.lang.String | string): com.sun.javadoc.ClassDoc
             }
         }
     }

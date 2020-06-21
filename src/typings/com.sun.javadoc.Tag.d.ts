@@ -28,7 +28,7 @@ declare namespace com {
                  * @return the name of this tag
                  */
                 // @ts-ignore
-                name(): java.lang.String
+                name(): string
                 /**
                  * Return the containing {@link Doc} of this Tag element.
                  * @return the containing {#link Doc} of this Tag element
@@ -54,18 +54,18 @@ declare namespace com {
                  * @return the kind of this tag.
                  */
                 // @ts-ignore
-                kind(): java.lang.String
+                kind(): string
                 /**
                  * Return the text of this tag, that is, the portion beyond tag name.
                  * @return the text of this tag
                  */
                 // @ts-ignore
-                text(): java.lang.String
+                text(): string
                 /**
                  * Convert this object to a string.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
                 /**
                  * For a documentation comment with embedded <code>{&#064;link}</code>
                  * tags, return an array of <code>Tag</code> objects.  The entire

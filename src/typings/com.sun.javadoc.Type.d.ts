@@ -20,7 +20,7 @@ declare namespace com {
                  * "<code>String</code>".
                  */
                 // @ts-ignore
-                typeName(): java.lang.String
+                typeName(): string
                 /**
                  * Return qualified name of type excluding any dimension information.
                  * <p>
@@ -28,7 +28,7 @@ declare namespace com {
                  * returns "<code>java.lang.String</code>".
                  */
                 // @ts-ignore
-                qualifiedTypeName(): java.lang.String
+                qualifiedTypeName(): string
                 /**
                  * Return the simple name of this type excluding any dimension information.
                  * This is the unqualified name of the type, except that for nested types
@@ -39,7 +39,7 @@ declare namespace com {
                  * @since 1.5
                  */
                 // @ts-ignore
-                simpleTypeName(): java.lang.String
+                simpleTypeName(): string
                 /**
                  * Return the type's dimension information, as a string.
                  * <p>
@@ -47,7 +47,7 @@ declare namespace com {
                  * "<code>[][]</code>".
                  */
                 // @ts-ignore
-                dimension(): java.lang.String
+                dimension(): string
                 /**
                  * Return a string representation of the type.
                  * This includes any dimension information and type arguments.
@@ -59,7 +59,7 @@ declare namespace com {
                  * @return a string representation of the type.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
                 /**
                  * Return true if this type represents a primitive type.
                  * @return true if this type represents a primitive type.

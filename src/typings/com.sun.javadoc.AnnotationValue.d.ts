@@ -21,14 +21,14 @@ declare namespace com {
                  * @return the value.
                  */
                 // @ts-ignore
-                value(): java.lang.Object
+                value(): any
                 /**
                  * Returns a string representation of the value.
                  * @return the text of a Java language annotation value expression
                  *           whose value is the value of this element.
                  */
                 // @ts-ignore
-                toString(): java.lang.String
+                toString(): string
             }
         }
     }

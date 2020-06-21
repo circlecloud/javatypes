@@ -109,17 +109,51 @@ ${nms.slice(1, nms.length).map((nm) => options.printAndAdd(`namespace ${mappingN
 }
 
 function buildClassName(classes: com.sun.javadoc.ClassDoc, options: Options) {
-    let interfaces = classes.interfaceTypes()
+    return `${options.printTsIgnore()}
+${classes.isInterface() ? buildInterfaceName(classes, options) : buildClassesName(classes, options)}`
+}
+
+function buildBaiscClassName(classes: com.sun.javadoc.ClassDoc) {
     let className = classes.toString()
-    className = className.substring(`${classes.qualifiedTypeName()}`.lastIndexOf('.') + 1, className.length)
-    if (classes.isInterface()) {
-        return `${options.printTsIgnore()}
-${options.printAndAdd(`interface ${className}${interfaces && interfaces.length !== 0 ? ` extends ${Java.from(interfaces).map((inter) => inter.toString()).join(', ')}` : ''} {`)}`
-    } else {
-        let superclass = classes.superclassType()
-        return `${options.printTsIgnore()}
-${options.printAndAdd(`class ${className}${superclass ? ` extends ${superclass.toString()}` : ''}${interfaces && interfaces.length !== 0 ? ` implements ${Java.from(interfaces).map((inter) => inter.toString()).join(', ')}` : ''} {`)}`
+    return className.startsWith(classes.qualifiedTypeName()) ? className.substring(`${classes.qualifiedTypeName()}`.lastIndexOf('.') + 1, className.length) : classes.simpleTypeName()
+}
+
+function buildInterfaceName(classes: com.sun.javadoc.ClassDoc, options: Options) {
+    return options.printAndAdd(`interface ${buildBaiscClassName(classes)}${buildInterface(classes, classes.interfaceTypes())} {`)
+}
+
+// if (classes.isInterface()) {
+//     return `${options.printTsIgnore()}
+// ${}`
+// } else {
+//     let superclass = classes.superclassType()
+//     return `${options.printTsIgnore()}
+// ${options.printAndAdd(`${classes.isAbstract() ? 'abstract ' : ''}class ${className}${superclass ?  : ''}${buildInterface(classes, interfaces)} {`)}`
+// }
+
+function buildClassesName(classes: com.sun.javadoc.ClassDoc, options: Options) {
+    let modifiers = ''
+    if (classes.isAbstract()) {
+        modifiers += 'abstract '
     }
+    return options.printAndAdd(`${modifiers}class ${buildBaiscClassName(classes)}${buildExtendsClass(classes, options)}${buildInterface(classes, classes.interfaceTypes())} {`)
+}
+
+function buildExtendsClass(classes: com.sun.javadoc.ClassDoc, options: Options) {
+    let superclassType = classes.superclassType()
+    if (!superclassType) return ''
+    return ` extends ${buildParentClassName(superclassType)}`
+}
+
+function buildInterface(classes: com.sun.javadoc.ClassDoc, interfaces: com.sun.javadoc.Type[]) {
+    if (!interfaces || !interfaces.length) return ''
+    let linkKeywork = classes.isInterface() ? ' extends ' : ' implements '
+    return `${linkKeywork}${Java.from(interfaces).map(inter => buildParentClassName(inter)).join(', ')}`
+}
+
+function buildParentClassName(type: com.sun.javadoc.Type) {
+    let parameterizedType = type.asParameterizedType()
+    return `${type.qualifiedTypeName() == "<any>" ? "java.lang.Object" : type.qualifiedTypeName()}${parameterizedType ? `<${Java.from(parameterizedType.typeArguments()).map(t => mappingType(t)).join(', ') || 'any'}>` : ''}`
 }
 
 function buildClassBody(classes: com.sun.javadoc.ClassDoc, options: Options) {
@@ -131,8 +165,11 @@ function buildClassBody(classes: com.sun.javadoc.ClassDoc, options: Options) {
     if (classes.methods().length) {
         methods += buildMethods(classes, options) + '\n'
     }
+    if (classes.enumConstants().length) {
+        body += buildFields(classes, Java.from(classes.enumConstants()), options) + '\n'
+    }
     if (classes.fields().length) {
-        body += buildFields(classes, options) + '\n'
+        body += buildFields(classes, Java.from(classes.fields()), options) + '\n'
     }
     body += methods
     return body
@@ -143,18 +180,60 @@ function buildConstructor(classes: com.sun.javadoc.ClassDoc, options: Options) {
 ${options.printBrackets(`constructor(${formatParameters(constructor)})`)}`).join('\n')
 }
 
-function buildFields(classes: com.sun.javadoc.ClassDoc, options: Options) {
-    return Java.from(classes.fields()).filter(field => !options.members[field.name()]).map(field => `${formatDoc(field, options.brackets)}${options.printTsIgnore()}
-${options.printBrackets(`${classes.isInterface() ? '' : `${field.isFinal() ? 'readonly ' : ''}${field.name()}: ${mappingType(field.type())}`}`)}`
-    ).join('\n')
+function buildFields(classes: com.sun.javadoc.ClassDoc, fields: com.sun.javadoc.FieldDoc[], options: Options) {
+    return fields.filter(field => !options.members[field.name()])
+        .map(field => `${formatDoc(field, options.brackets)}${options.printTsIgnore()}
+${buildField(classes, field, options)}`).join('\n')
+}
+
+function buildField(classes: com.sun.javadoc.ClassDoc, field: com.sun.javadoc.FieldDoc, options: Options) {
+    return `${buildFieldModifier(classes, field, options)}${field.name()}: ${mappingType(field.type())}`
+}
+
+function buildBasicModifier(classes: com.sun.javadoc.ClassDoc, modifier: com.sun.javadoc.FieldDoc | com.sun.javadoc.MethodDoc, options: Options) {
+    let modifiers = ''
+    if (!classes.isOrdinaryClass()) { return options.printBrackets() }
+    // public | private | static => method | field
+    if (modifier.isMethod() || modifier.isField()) {
+        if (modifier.isPublic()) {
+            modifiers += 'public '
+        } else if (modifier.isPrivate()) {
+            modifiers += 'private '
+        }
+        if (modifier.isStatic()) {
+            modifiers += 'static '
+        }
+    }
+    return options.printBrackets(modifiers)
+}
+
+function buildFieldModifier(classes: com.sun.javadoc.ClassDoc, modifier: com.sun.javadoc.FieldDoc, options: Options) {
+    let modifiers = buildBasicModifier(classes, modifier, options)
+    if (modifier.isFinal()) {
+        modifiers += 'readonly '
+    }
+    return modifiers
+}
+
+function buildMethodModifier(classes: com.sun.javadoc.ClassDoc, modifier: com.sun.javadoc.MethodDoc, options: Options) {
+    let modifiers = buildBasicModifier(classes, modifier, options)
+    // abstract => abstract class | abstract method
+    if (modifier.isAbstract() && classes.isAbstract() && !classes.isInterface()) {
+        modifiers += 'abstract '
+    }
+    return modifiers
 }
 
 function buildMethods(classes: com.sun.javadoc.ClassDoc, options: Options) {
     return Java.from(classes.methods()).map((method) => {
         options.members[method.name()] = method
         return `${formatDoc(method, options.brackets)}${options.printTsIgnore()}
-${options.printBrackets(`${classes.isInterface() ? '' : `${classes.isAbstract() && method.isAbstract() ? 'abstract ' : ''}`}${method.name()}${method.typeParameters().length ? `<${Java.from(method.typeParameters()).map(t => t.toString()).join(', ')}>` : ''}(${formatParameters(method)}): ${mappingReturnType(method)}`)}`
+${buildMethodModifier(classes, method, options)}${method.name()}${buildTypeParameters(method)}(${formatParameters(method)}): ${mappingReturnType(method)}`
     }).join('\n')
+}
+
+function buildTypeParameters(executableMemberDoc: com.sun.javadoc.ExecutableMemberDoc) {
+    return executableMemberDoc.typeParameters().length ? `<${Java.from(executableMemberDoc.typeParameters()).map(t => t.toString().replace(/<.* super [A-Z].*>/ig, '').replace("<any>", "java.lang.Object")).join(', ')}>` : ''
 }
 
 function buildClassFooter(_classes: com.sun.javadoc.ClassDoc, options: Options) {
@@ -215,18 +294,18 @@ type JavaType = {
     type: string
 }
 
-function mappingType(type: com.sun.javadoc.Type): string {
+function mappingType(type: com.sun.javadoc.Type, isParam: boolean = true, keepOrogin = false): string {
     if (!type || !type.toString()) { return 'any' }
+    let parameterizedType = type.asParameterizedType()
     let outType = typeMap[type.qualifiedTypeName()] || type.qualifiedTypeName() || 'any'
-    let javaType = mappingClassName(type)
-    let tsType = javaType.replace(type.qualifiedTypeName(), outType).replace('function', 'function$')
-    let result = javaType.indexOf('function.') != -1 && javaType !== tsType && (type.toString() as any).contains('.') ? `${javaType} | ${tsType}` : tsType
-    return result.replace(/\? extends /ig, '').replace('?', 'any')
+    let javaType = mappingClassName(type) + `${parameterizedType ? `<${Java.from(parameterizedType.typeArguments()).map(t => mappingType(t)).join(', ') || 'any'}>` : ''}`
+    let tsType = keepOrogin ? type.qualifiedTypeName() : javaType.replace(type.qualifiedTypeName(), outType).replace('function', 'function$')
+    let result = javaType.indexOf('function.') == -1 && javaType !== tsType && (type.toString() as any).contains('.') && isParam ? `${javaType}${type.dimension()} | ${tsType}${type.dimension()}` : `${tsType}${type.dimension()}`
+    return result.replace(/\? extends /ig, '').replace(/\? super /ig, '').replace('?', 'any')
 }
 
 function mappingClassName(type: com.sun.javadoc.Type, isReturn: boolean = false) {
-    let methodName = isReturn ? 'qualifiedTypeName' : 'toString'
-    return type[methodName]() == "<any>" ? "object" : type[methodName]()
+    return type.qualifiedTypeName() == "<any>" ? "object" : type.qualifiedTypeName()
 }
 
 function formatDoc(doc: com.sun.javadoc.Doc, closeBuk: number) {
@@ -264,5 +343,5 @@ function formatParameters(method: com.sun.javadoc.ExecutableMemberDoc) {
 
 function mappingReturnType(method: com.sun.javadoc.MethodDoc) {
     let type = method.returnType()
-    return type.asTypeVariable() ? type.qualifiedTypeName() : type.toString()
+    return type.asTypeVariable() ? type.qualifiedTypeName() : mappingType(type, false)
 }

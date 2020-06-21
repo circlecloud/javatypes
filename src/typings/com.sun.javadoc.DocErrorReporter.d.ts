@@ -13,7 +13,7 @@ declare namespace com {
                  * @param msg message to print
                  */
                 // @ts-ignore
-                printError(msg: string): void
+                printError(msg: java.lang.String | string): void
                 /**
                  * Print an error message and increment error count.
                  * @param pos the position item where the error occurs
@@ -21,13 +21,13 @@ declare namespace com {
                  * @since 1.4
                  */
                 // @ts-ignore
-                printError(pos: com.sun.javadoc.SourcePosition, msg: string): void
+                printError(pos: com.sun.javadoc.SourcePosition, msg: java.lang.String | string): void
                 /**
                  * Print warning message and increment warning count.
                  * @param msg message to print
                  */
                 // @ts-ignore
-                printWarning(msg: string): void
+                printWarning(msg: java.lang.String | string): void
                 /**
                  * Print warning message and increment warning count.
                  * @param pos the position item where the warning occurs
@@ -35,13 +35,13 @@ declare namespace com {
                  * @since 1.4
                  */
                 // @ts-ignore
-                printWarning(pos: com.sun.javadoc.SourcePosition, msg: string): void
+                printWarning(pos: com.sun.javadoc.SourcePosition, msg: java.lang.String | string): void
                 /**
                  * Print a message.
                  * @param msg message to print
                  */
                 // @ts-ignore
-                printNotice(msg: string): void
+                printNotice(msg: java.lang.String | string): void
                 /**
                  * Print a message.
                  * @param pos the position item where the message occurs
@@ -49,7 +49,7 @@ declare namespace com {
                  * @since 1.4
                  */
                 // @ts-ignore
-                printNotice(pos: com.sun.javadoc.SourcePosition, msg: string): void
+                printNotice(pos: com.sun.javadoc.SourcePosition, msg: java.lang.String | string): void
             }
         }
     }

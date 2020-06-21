@@ -13,10 +13,20 @@ declare namespace com {
              */
             // @ts-ignore
             class LanguageVersion extends java.lang.Enum<com.sun.javadoc.LanguageVersion> {
+                /**
+                 * 1.1 added nested classes and interfaces.
+                 */
+                // @ts-ignore
+                readonly JAVA_1_1: com.sun.javadoc.LanguageVersion
+                /**
+                 * 1.5 added generic types, annotations, enums, and varArgs.
+                 */
+                // @ts-ignore
+                readonly JAVA_1_5: com.sun.javadoc.LanguageVersion
                 // @ts-ignore
                 values(): com.sun.javadoc.LanguageVersion[]
                 // @ts-ignore
-                valueOf(name: string): com.sun.javadoc.LanguageVersion
+                valueOf(name: java.lang.String | string): com.sun.javadoc.LanguageVersion
             }
         }
     }

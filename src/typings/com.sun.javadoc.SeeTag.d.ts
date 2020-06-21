@@ -28,7 +28,7 @@ declare namespace com {
                  * return "the trim method".
                  */
                 // @ts-ignore
-                label(): java.lang.String
+                label(): string
                 /**
                  * Get the package doc when <code>@see</code> references only a package.
                  * Return null if the package cannot be found, or if
@@ -59,7 +59,7 @@ declare namespace com {
                  * <code>@see &lt;a href="java.sun.com"&gt;</code>.
                  */
                 // @ts-ignore
-                referencedClassName(): java.lang.String
+                referencedClassName(): string
                 /**
                  * Get the class doc referenced by the class name part of @see.
                  * Return null if the class cannot be found.
@@ -83,7 +83,7 @@ declare namespace com {
                  * return "startsWith(String)".
                  */
                 // @ts-ignore
-                referencedMemberName(): java.lang.String
+                referencedMemberName(): string
                 /**
                  * Get the member doc for the field, constructor or method
                  * referenced by <code>@see</code>. Return null if the member cannot

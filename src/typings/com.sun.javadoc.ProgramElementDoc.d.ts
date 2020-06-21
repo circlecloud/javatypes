@@ -37,13 +37,13 @@ declare namespace com {
                  * @return the qualified name of the program element as a String.
                  */
                 // @ts-ignore
-                qualifiedName(): java.lang.String
+                qualifiedName(): string
                 /**
                  * Get the modifier specifier integer.
                  * @see java.lang.reflect.Modifier
                  */
                 // @ts-ignore
-                modifierSpecifier(): int
+                modifierSpecifier(): number /*int*/
                 /**
                  * Get modifiers string.
                  * For example, for:
@@ -54,7 +54,7 @@ declare namespace com {
                  * Annotations are not included.
                  */
                 // @ts-ignore
-                modifiers(): java.lang.String
+                modifiers(): string
                 /**
                  * Get the annotations of this program element.
                  * Return an empty array if there are none.

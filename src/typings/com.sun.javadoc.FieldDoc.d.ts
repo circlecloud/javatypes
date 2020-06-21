@@ -38,7 +38,7 @@ declare namespace com {
                  *  If the field is not constant, returns null.
                  */
                 // @ts-ignore
-                constantValue(): java.lang.Object
+                constantValue(): any
                 /**
                  * Get the value of a constant field.
                  * @return the text of a Java language expression whose value
@@ -47,7 +47,7 @@ declare namespace com {
                  *  not constant, returns null.
                  */
                 // @ts-ignore
-                constantValueExpression(): java.lang.String
+                constantValueExpression(): string
             }
         }
     }

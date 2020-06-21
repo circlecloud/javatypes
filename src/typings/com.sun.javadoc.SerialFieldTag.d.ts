@@ -16,17 +16,17 @@ declare namespace com {
              * @see java.io.ObjectStreamField
              */
             // @ts-ignore
-            interface SerialFieldTag extends com.sun.javadoc.Tag, java.lang.Comparable<java.lang.Object> {
+            interface SerialFieldTag extends com.sun.javadoc.Tag, java.lang.Comparable<java.lang.Object | any> {
                 /**
                  * Return the serializable field name.
                  */
                 // @ts-ignore
-                fieldName(): java.lang.String
+                fieldName(): string
                 /**
                  * Return the field type string.
                  */
                 // @ts-ignore
-                fieldType(): java.lang.String
+                fieldType(): string
                 /**
                  * Return the ClassDoc for field type.
                  * @return null if no ClassDoc for field type is visible from
@@ -39,7 +39,7 @@ declare namespace com {
                  * javadoc comment of corresponding FieldDoc.
                  */
                 // @ts-ignore
-                description(): java.lang.String
+                description(): string
                 /**
                  * Compares this Object with the specified Object for order.  Returns a
                  * negative integer, zero, or a positive integer as this Object is less
@@ -54,7 +54,7 @@ declare namespace com {
                  * @since 1.2
                  */
                 // @ts-ignore
-                compareTo(obj: any): int
+                compareTo(obj: java.lang.Object | any): number /*int*/
             }
         }
     }

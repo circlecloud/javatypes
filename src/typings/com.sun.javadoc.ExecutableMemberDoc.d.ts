@@ -92,7 +92,7 @@ declare namespace com {
                  * it will return <code>(java.lang.String,int)</code>.
                  */
                 // @ts-ignore
-                signature(): java.lang.String
+                signature(): string
                 /**
                  * get flat signature.  all types are not qualified.
                  * return a String, which is the flat signiture of this member.
@@ -101,7 +101,7 @@ declare namespace com {
                  * it will return <code>(String, int)</code>.
                  */
                 // @ts-ignore
-                flatSignature(): java.lang.String
+                flatSignature(): string
                 /**
                  * Return the formal type parameters of this method or constructor.
                  * Return an empty array if this method or constructor is not generic.

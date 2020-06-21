@@ -23,7 +23,7 @@ declare namespace com {
              * name of the starting class on the javadoc tool command line.
              */
             // @ts-ignore
-            class Doclet extends java.lang.Object {
+            abstract class Doclet extends java.lang.Object {
                 // @ts-ignore
                 constructor()
                 /**
@@ -32,7 +32,7 @@ declare namespace com {
                  * @return true on success.
                  */
                 // @ts-ignore
-                start(root: com.sun.javadoc.RootDoc): boolean
+                public static start(root: com.sun.javadoc.RootDoc): boolean
                 /**
                  * Check for doclet-added options.  Returns the number of
                  * arguments you must specify on the command line for the
@@ -46,7 +46,7 @@ declare namespace com {
                  *          option not known.  Negative value means error occurred.
                  */
                 // @ts-ignore
-                optionLength(option: string): int
+                public static optionLength(option: java.lang.String | string): number /*int*/
                 /**
                  * Check that options have the correct arguments.
                  * <P>
@@ -60,7 +60,7 @@ declare namespace com {
                  * @return true if the options are valid.
                  */
                 // @ts-ignore
-                validOptions(options: string[][], reporter: com.sun.javadoc.DocErrorReporter): boolean
+                public static validOptions(options: java.lang.String[][] | string[][], reporter: com.sun.javadoc.DocErrorReporter): boolean
                 /**
                  * Return the version of the Java Programming Language supported
                  * by this doclet.
@@ -71,7 +71,7 @@ declare namespace com {
                  * @since 1.5
                  */
                 // @ts-ignore
-                languageVersion(): com.sun.javadoc.LanguageVersion
+                public static languageVersion(): com.sun.javadoc.LanguageVersion
             }
         }
     }

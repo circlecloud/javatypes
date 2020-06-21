@@ -91,7 +91,7 @@ declare namespace com {
                  *  or null if not found.
                  */
                 // @ts-ignore
-                findClass(className: string): com.sun.javadoc.ClassDoc
+                findClass(className: java.lang.String | string): com.sun.javadoc.ClassDoc
             }
         }
     }

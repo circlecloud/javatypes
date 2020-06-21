@@ -18,14 +18,14 @@ declare namespace com {
                  * @return the parameter name.
                  */
                 // @ts-ignore
-                parameterName(): java.lang.String
+                parameterName(): string
                 /**
                  * Return the parameter comment
                  * associated with this <code>ParamTag</code>.
                  * @return the parameter comment.
                  */
                 // @ts-ignore
-                parameterComment(): java.lang.String
+                parameterComment(): string
                 /**
                  * Return true if this <code>ParamTag</code> corresponds to a type
                  * parameter.  Return false if it corresponds to an ordinary parameter
